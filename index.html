@@ -6,40 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        * {
-    font-family: 'Roboto', sans-serif;
-}
-
-.box {
-    width: 200px;
-    margin-bottom: 5px;
-}
-
-.container {
-    border: 5px solid;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    width: 250px;
-}
-
-.button {
-    border-radius: 5px;
-    color: royalblue;
-    font-weight: bold;
-    padding: 5px;
-    width: 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 2px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-}
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -49,26 +16,5 @@
         <button class="button" onclick="copy_password()">Copy Password</button>
     </div>
 </body>
-<script>
-const output_box = document.getElementById('output_box');
-
-function generate_password() {
-    var generatePassword = (
-        length = 20,
-        wishlist = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~!@-#$'
-      ) =>
-        Array.from(crypto.getRandomValues(new Uint32Array(length)))
-          .map((x) => wishlist[x % wishlist.length])
-          .join('')
-      
-      console.log("Generated password: " + generatePassword())
-      output_box.value = generatePassword();
-}
-
-function copy_password() {
-    output_box.select();
-    document.execCommand('copy');
-    output_box.blur();
-}
-</script>
+<script src="script.js"></script>
 </html>
