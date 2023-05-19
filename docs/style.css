@@ -1,0 +1,32 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.box {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.container {
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 250px;
+}
+
+.button {
+    border-radius: 5px;
+    color: royalblue;
+    font-weight: bold;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
